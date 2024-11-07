@@ -73,5 +73,14 @@
             <Insets left="20.0" right="20.0" />
          </padding>
       </VBox>
+      <Button fx:id="btnBack" contentDisplay="GRAPHIC_ONLY" layoutX="29.0" layoutY="25.0" mnemonicParsing="false" onAction="#actionEvent" style="-fx-background-color: white; -fx-background-radius: 90;" text="Button">
+         <graphic>
+            <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true">
+               <image>
+                  <Image url="@images/back.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
    </children>
 </AnchorPane>

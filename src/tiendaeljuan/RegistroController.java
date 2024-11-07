@@ -42,13 +42,16 @@ public class RegistroController implements Initializable {
     private PasswordField con;
     
     @FXML
-    private Button btnReg;
+    private Button btnReg, btnBack;
     
     public void actionEvent (ActionEvent e){
         Object evt = e.getSource();
         if(evt.equals(btnReg)){
             lista.añadir_lista(nom.getText(), ape.getText(), mail.getText(), con.getText());
             loadStage("/tiendaeljuan/registroExit.fxml", e);
+        }
+        if(evt.equals(btnBack)){
+            loadStage("/tiendaeljuan/login.fxml", e);
         }
     }
     
