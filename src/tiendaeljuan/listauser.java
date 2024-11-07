@@ -47,7 +47,6 @@ public class listauser {
             }while(p != null);
             if(p == null){
                 info = new user(nombre, apellido, mail, contraseña);
-                JOptionPane.showMessageDialog(null, "Registro exitoso!");
                 return info;
             }else{
                 return null;

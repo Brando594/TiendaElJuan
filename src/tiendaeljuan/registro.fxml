@@ -12,7 +12,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tiendaeljuan.RegistroController">
    <children>
       <ImageView fitHeight="400.0" fitWidth="600.0" pickOnBounds="true">
          <image>
@@ -33,7 +33,7 @@
                         <Font name="System Bold" size="12.0" />
                      </font>
                   </Label>
-                  <TextField prefHeight="35.0" promptText="Ingrese su nombre" style="-fx-background-color: #1E2126;" />
+                  <TextField fx:id="nom" prefHeight="35.0" promptText="Ingrese su nombre" style="-fx-background-color: #1E2126;" />
                   <Label text="Apellido" textFill="#888888">
                      <font>
                         <Font name="System Bold" size="12.0" />
@@ -42,7 +42,7 @@
                         <Insets top="10.0" />
                      </VBox.margin>
                   </Label>
-                  <TextField prefHeight="35.0" promptText="Ingrese su apellido" style="-fx-background-color: #1E2126;" />
+                  <TextField fx:id="ape" prefHeight="35.0" promptText="Ingrese su apellido" style="-fx-background-color: #1E2126;" />
                   <Label text="Gmail" textFill="#888888">
                      <font>
                         <Font name="System Bold" size="12.0" />
@@ -51,7 +51,7 @@
                         <Insets top="10.0" />
                      </VBox.margin>
                   </Label>
-                  <TextField prefHeight="35.0" promptText="Ingrese su Email" style="-fx-background-color: #1E2126;" />
+                  <TextField fx:id="mail" prefHeight="35.0" promptText="Ingrese su Email" style="-fx-background-color: #1E2126;" />
                   <Label text="Contraseña" textFill="#888888">
                      <font>
                         <Font name="System Bold" size="12.0" />
@@ -60,10 +60,10 @@
                         <Insets top="10.0" />
                      </VBox.margin>
                   </Label>
-                  <PasswordField prefHeight="35.0" promptText="Imgrese su contraseña" style="-fx-background-color: #1E2126;" />
+                  <PasswordField fx:id="con" prefHeight="35.0" promptText="Imgrese su contraseña" style="-fx-background-color: #1E2126;" />
                </children>
             </VBox>
-            <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="230.0" style="-fx-background-color: #2C4DFF;" text="Registrar" textFill="WHITE">
+            <Button fx:id="btnReg" mnemonicParsing="false" onAction="#actionEvent" prefHeight="30.0" prefWidth="230.0" style="-fx-background-color: #2C4DFF;" text="Registrar" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>

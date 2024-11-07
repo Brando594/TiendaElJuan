@@ -20,8 +20,6 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import javafx.stage.Window;
 import javafx.stage.WindowEvent;
@@ -31,24 +29,15 @@ import javafx.stage.WindowEvent;
  *
  * @author Brando
  */
-public class RegistroController implements Initializable {
-    
-    public static listauser lista = new listauser();
+public class RegistroExitController implements Initializable {
     
     @FXML
-    private TextField nom, ape, mail;
-    
-    @FXML
-    private PasswordField con;
-    
-    @FXML
-    private Button btnReg;
+    private Button btnSig;
     
     public void actionEvent (ActionEvent e){
         Object evt = e.getSource();
-        if(evt.equals(btnReg)){
-            lista.añadir_lista(nom.getText(), ape.getText(), mail.getText(), con.getText());
-            loadStage("/tiendaeljuan/registroExit.fxml", e);
+        if(evt.equals(btnSig)){
+            loadStage("/tiendaeljuan/principal.fxml", e);
         }
     }
     
@@ -83,7 +72,8 @@ public class RegistroController implements Initializable {
                 }
             });
         }catch ( IOException ex){
-            Logger.getLogger(RegistroController.class.getName()).log(Level.SEVERE,null, ex);
+            Logger.getLogger(LoginController.class.getName()).log(Level.SEVERE,null, ex);
         }     
     }
+    
 }
