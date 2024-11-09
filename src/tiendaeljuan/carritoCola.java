@@ -6,6 +6,7 @@ package tiendaeljuan;
 
 import java.util.LinkedList;
 import java.util.Queue;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -19,8 +20,29 @@ public class carritoCola {
         this.cola = new LinkedList<>();
     }
     
-    public void añadirAlCarrito(producto p){
-        cola.add(p);
+    public void agregarProducto(producto prod) {
+        cola.add(prod);
+        JOptionPane.showMessageDialog(null, "Producto añadido con exito!");
+    }
+
+    public void eliminarDelCarrito(String nombreProducto) {
+        for (producto elim : cola){
+            if(elim.nombre.equals(nombreProducto)){
+                cola.remove(elim);
+                break;
+            }
+        }
+    }
+
+    // Método para comprar un producto específico por su nombre
+    public void Comprar(String nombreProducto) {
+        producto productoComprado = null;
+        for (producto prod : cola) {
+            if (prod.getNombre().equalsIgnoreCase(nombreProducto)) {
+                productoComprado = prod;
+                break;
+            }
+        }
     }
 
 }
