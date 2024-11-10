@@ -48,6 +48,14 @@ public class MuestraproductoController implements Initializable {
         if(evt.equals(btnBack)){
             loadStage("/tiendaeljuan/principal.fxml", e);
         }
+        if(evt.equals(btnCar)){
+            producto p = new producto(PrincipalController.nombre, PrincipalController.imagen, PrincipalController.user_activo, PrincipalController.precio);
+            PrincipalController.cola1.agregarProducto(p);
+        }
+        if(evt.equals(btnDes)){
+            producto p = new producto(PrincipalController.nombre, PrincipalController.imagen, PrincipalController.user_activo, PrincipalController.precio);
+            PrincipalController.cola2.agregarProducto(p);
+        }
     }
     
     /**

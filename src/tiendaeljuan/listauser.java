@@ -64,13 +64,13 @@ public class listauser {
         }
     }
     
-    public user login(String nombre, String contraseña){
+    public user login(String mail, String contraseña){
         user p = cab;
         if(cab == null)
             return null;
         else{
             while(p != null){
-                if((p.nombre).equals(nombre) && (p.contraseña).equals(contraseña))
+                if((p.email).equals(mail) && (p.contraseña).equals(contraseña))
                     return p;
                 else
                     p=p.sig;

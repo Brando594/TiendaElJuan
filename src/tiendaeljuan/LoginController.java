@@ -20,9 +20,12 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import javafx.stage.Window;
 import javafx.stage.WindowEvent;
+import javax.swing.JOptionPane;
 
 /**
  * FXML Controller class
@@ -32,12 +35,29 @@ import javafx.stage.WindowEvent;
 public class LoginController implements Initializable {
     
     @FXML
-    private Button btnCrear;
+    private Button btnCrear, btnLogin;
+    
+    @FXML
+    private TextField mail;
+    
+    @FXML
+    private PasswordField pass;
     
     public void actionEvent(ActionEvent e){
         Object evt = e.getSource();
         if(evt.equals(btnCrear)){
             loadStage("/tiendaeljuan/registro.fxml", e);
+        }
+        if(evt.equals(btnLogin)){
+            user log = RegistroController.lista.login(mail.getText(), pass.getText());
+            if(log != null){
+                JOptionPane.showMessageDialog(null, "Logueo exitoso!");
+                loadStage("/tiendaeljuan/principal.fxml", e);
+            }else{
+                JOptionPane.showMessageDialog(null, "Datos erroneos!");
+                mail.setText("");
+                pass.setText("");
+            }
         }
     }
     

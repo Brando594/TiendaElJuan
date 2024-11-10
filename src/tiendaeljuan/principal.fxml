@@ -24,7 +24,7 @@
    <children>
       <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: black;">
          <children>
-            <Button contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" style="-fx-background-radius: 90;" text="Button">
+            <Button fx:id="btnBack" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onAction="#actionEvent" style="-fx-background-radius: 90;" text="Button">
                <graphic>
                   <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                      <image>
