@@ -11,7 +11,7 @@ import javafx.fxml.Initializable;
 /**
  * FXML Controller class
  *
- * @author danie
+ * @author Brando
  */
 public class HistorialController implements Initializable {
 

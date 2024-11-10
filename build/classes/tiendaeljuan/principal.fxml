@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/20.0.1">
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/20.0.1" fx:controller="tiendaeljuan.PrincipalController">
   <columnConstraints>
     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
   </columnConstraints>
@@ -41,7 +41,7 @@
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <Button contentDisplay="TOP" mnemonicParsing="false" style="-fx-background-color: transparent;" text="Mis deseos" textFill="WHITE">
+            <Button fx:id="deseos" contentDisplay="TOP" mnemonicParsing="false" onAction="#actionEvent" style="-fx-background-color: transparent;" text="Mis deseos" textFill="WHITE">
                <graphic>
                   <ImageView fitHeight="150.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -56,7 +56,7 @@
                   <Insets left="200.0" />
                </HBox.margin>
             </Button>
-            <Button contentDisplay="TOP" mnemonicParsing="false" style="-fx-background-color: transparent;" text="Carrito" textFill="WHITE">
+            <Button fx:id="carrito" contentDisplay="TOP" mnemonicParsing="false" onAction="#actionEvent" style="-fx-background-color: transparent;" text="Carrito" textFill="WHITE">
                <graphic>
                   <ImageView fitHeight="150.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -68,7 +68,7 @@
                   <Font name="System Bold" size="13.0" />
                </font>
             </Button>
-            <Button contentDisplay="TOP" mnemonicParsing="false" style="-fx-background-color: transparent;" text="Historial" textFill="WHITE">
+            <Button fx:id="historial" contentDisplay="TOP" mnemonicParsing="false" onAction="#actionEvent" style="-fx-background-color: transparent;" text="Historial" textFill="WHITE">
                <graphic>
                   <ImageView fitHeight="150.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -97,7 +97,7 @@
                         <Insets left="5.0" />
                      </padding>
                   </Label>
-                  <Button mnemonicParsing="false" prefHeight="137.0" prefWidth="178.0" style="-fx-background-color: transparent;" text="\$ 5.299.900">
+                  <Button fx:id="btnP1" mnemonicParsing="false" onAction="#actionEvent" prefHeight="137.0" prefWidth="178.0" style="-fx-background-color: transparent;" text="\$ 5.299.900">
                      <graphic>
                         <ImageView fitHeight="150.0" fitWidth="90.0" pickOnBounds="true">
                            <image>
@@ -109,7 +109,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Label layoutX="10.0" layoutY="10.0" text="Apple IPhone 14 Pro (256 GB)">
+                  <Label layoutX="10.0" layoutY="10.0" text="Apple IPhone 15 Pro Max(256 GB)">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
@@ -117,11 +117,11 @@
                         <Insets left="5.0" />
                      </padding>
                   </Label>
-                  <Button layoutX="10.0" layoutY="27.0" mnemonicParsing="false" prefHeight="137.0" prefWidth="178.0" style="-fx-background-color: transparent;" text="\$ 7.500.000">
+                  <Button fx:id="btnP4" layoutX="10.0" layoutY="27.0" mnemonicParsing="false" onAction="#actionEvent" prefHeight="137.0" prefWidth="178.0" style="-fx-background-color: transparent;" text="\$ 7.500.000">
                      <graphic>
                         <ImageView fitHeight="120.0" fitWidth="90.0" pickOnBounds="true">
                            <image>
-                              <Image url="@images/iphone14.jpg" />
+                              <Image url="@images/iphone15promax.jpg" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -144,7 +144,7 @@
                         <Insets left="5.0" />
                      </padding>
                   </Label>
-                  <Button mnemonicParsing="false" prefHeight="137.0" prefWidth="178.0" style="-fx-background-color: transparent;" text="\$ 4.299.000">
+                  <Button fx:id="btnP2" mnemonicParsing="false" onAction="#actionEvent" prefHeight="137.0" prefWidth="178.0" style="-fx-background-color: transparent;" text="\$ 4.299.000">
                      <graphic>
                         <ImageView fitHeight="150.0" fitWidth="90.0" pickOnBounds="true">
                            <image>
@@ -164,7 +164,7 @@
                         <Insets left="5.0" />
                      </padding>
                   </Label>
-                  <Button layoutX="10.0" layoutY="27.0" mnemonicParsing="false" prefHeight="137.0" prefWidth="178.0" style="-fx-background-color: transparent;" text="\$ 1.500.000">
+                  <Button fx:id="btnP5" layoutX="10.0" layoutY="27.0" mnemonicParsing="false" onAction="#actionEvent" prefHeight="137.0" prefWidth="178.0" style="-fx-background-color: transparent;" text="\$ 1.500.000">
                      <graphic>
                         <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -191,7 +191,7 @@
                         <Insets left="5.0" />
                      </padding>
                   </Label>
-                  <Button mnemonicParsing="false" prefHeight="137.0" prefWidth="178.0" style="-fx-background-color: transparent;" text="\$ 3.000.000">
+                  <Button fx:id="btnP3" mnemonicParsing="false" onAction="#actionEvent" prefHeight="137.0" prefWidth="178.0" style="-fx-background-color: transparent;" text="\$ 3.000.000">
                      <graphic>
                         <ImageView fitHeight="150.0" fitWidth="90.0" pickOnBounds="true">
                            <image>
@@ -211,7 +211,7 @@
                         <Insets left="5.0" />
                      </padding>
                   </Label>
-                  <Button layoutX="10.0" layoutY="27.0" mnemonicParsing="false" prefHeight="137.0" prefWidth="178.0" style="-fx-background-color: transparent;" text="\$ 4.500.000">
+                  <Button fx:id="btnP6" layoutX="10.0" layoutY="27.0" mnemonicParsing="false" onAction="#actionEvent" prefHeight="137.0" prefWidth="178.0" style="-fx-background-color: transparent;" text="\$ 4.500.000">
                      <graphic>
                         <ImageView fitHeight="150.0" fitWidth="90.0" pickOnBounds="true">
                            <image>
