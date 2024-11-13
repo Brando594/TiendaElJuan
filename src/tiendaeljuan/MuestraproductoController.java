@@ -49,11 +49,11 @@ public class MuestraproductoController implements Initializable {
             loadStage("/tiendaeljuan/principal.fxml", e);
         }
         if(evt.equals(btnCar)){
-            producto p = new producto(PrincipalController.nombre, PrincipalController.imagen, PrincipalController.user_activo, PrincipalController.precio);
-            PrincipalController.cola1.agregarProducto(p);
+            producto p = new producto(PrincipalController.nombre, PrincipalController.imagen, LoginController.mail_user, PrincipalController.precio, 1);
+            PrincipalController.cola1.añadir_al_carrito(p);
         }
         if(evt.equals(btnDes)){
-            producto p = new producto(PrincipalController.nombre, PrincipalController.imagen, PrincipalController.user_activo, PrincipalController.precio);
+            producto p = new producto(PrincipalController.nombre, PrincipalController.imagen, LoginController.mail_user, PrincipalController.precio, 1);
             PrincipalController.cola2.agregarProducto(p);
         }
     }

@@ -47,8 +47,8 @@ public class RegistroController implements Initializable {
     public void actionEvent (ActionEvent e){
         Object evt = e.getSource();
         if(evt.equals(btnReg)){
-            PrincipalController.user_activo = mail.getText();
             lista.añadir_lista(nom.getText(), ape.getText(), mail.getText(), con.getText());
+            LoginController.mail_user = mail.getText();
             loadStage("/tiendaeljuan/registroExit.fxml", e);
         }
         if(evt.equals(btnBack)){

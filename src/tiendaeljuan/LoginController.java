@@ -34,6 +34,8 @@ import javax.swing.JOptionPane;
  */
 public class LoginController implements Initializable {
     
+    public static String mail_user;
+    
     @FXML
     private Button btnCrear, btnLogin;
     
@@ -51,6 +53,7 @@ public class LoginController implements Initializable {
         if(evt.equals(btnLogin)){
             user log = RegistroController.lista.login(mail.getText(), pass.getText());
             if(log != null){
+                mail_user = mail.getText();
                 JOptionPane.showMessageDialog(null, "Logueo exitoso!");
                 loadStage("/tiendaeljuan/principal.fxml", e);
             }else{

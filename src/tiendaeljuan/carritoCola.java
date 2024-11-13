@@ -19,13 +19,39 @@ public class carritoCola {
     public carritoCola(){
         this.cola = new LinkedList<>();
     }
+
+    public Queue<producto> get_carrito() {
+        return cola;
+    }
     
-    public void agregarProducto(producto prod) {
-        cola.add(prod);
-        JOptionPane.showMessageDialog(null, "Producto añadido con exito!");
+    public void añadir_al_carrito(producto prod) {
+        boolean existe = false;
+
+        for (producto p : cola) {
+            if (p.getNombre().equals(prod.getNombre()) && p.comprador.equals(LoginController.mail_user)) {  
+                p.setCantidad(p.getCantidad() + 1);  
+                existe = true;
+                JOptionPane.showMessageDialog(null, "Producto agregado al carrito: " + prod.getNombre());
+                break;
+            }
+        }
+
+        if (!existe && prod.comprador.equals(LoginController.mail_user)) {
+            cola.add(prod);
+            JOptionPane.showMessageDialog(null, "Producto agregado al carrito: " + prod.getNombre());
+        }
+    }
+    
+    public producto buscar_nombre(String nombreProducto) {
+        for (producto prod : cola) {
+            if (prod.getNombre().equals(nombreProducto)) {
+                return prod;
+            }
+        }
+        return null;  
     }
 
-    public void eliminarDelCarrito(String nombreProducto) {
+    public void eliminar_nombre(String nombreProducto) {
         for (producto elim : cola){
             if(elim.nombre.equals(nombreProducto)){
                 cola.remove(elim);
@@ -34,8 +60,7 @@ public class carritoCola {
         }
     }
 
-    // Método para comprar un producto específico por su nombre
-    public void Comprar(String nombreProducto) {
+    public void comprar_nombre(String nombreProducto) {
         producto productoComprado = null;
         for (producto prod : cola) {
             if (prod.getNombre().equalsIgnoreCase(nombreProducto)) {
@@ -43,6 +68,30 @@ public class carritoCola {
                 break;
             }
         }
+
+        if (productoComprado != null) {
+            System.out.println("Comprando producto: " + productoComprado.getNombre() + " - Precio: $" + productoComprado.getPrecio());
+            cola.remove(productoComprado);
+        } else {
+            System.out.println("El producto con el nombre '" + nombreProducto + "' no está en el carrito.");
+        }
     }
 
+    public void comprar_todo() {
+        if (cola.isEmpty()) {
+            System.out.println("El carrito está vacío, no hay productos para comprar.");
+            return;
+        }
+
+        float total = 0;
+        System.out.println("Procesando compra de todos los productos:");
+
+        for (producto prod : cola) {
+            System.out.println("Comprando producto: " + prod.getNombre() + " - Precio: $" + prod.getPrecio());
+            total += prod.getPrecio();
+        }
+
+        cola.clear(); 
+        System.out.println("Compra realizada. Total: $" + total);
+    }
 }
