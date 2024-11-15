@@ -22,9 +22,24 @@ public class deseosCola {
         this.cola = new LinkedList<>();
     }
     
+    public Queue<producto> get_deseos() {
+        return cola;
+    }
+    
     public void agregarProducto(producto prod) {
-        cola.add(prod);
-        JOptionPane.showMessageDialog(null, "Producto añadido con exito!");
+        boolean existe = false;
+
+        for (producto p : cola) {
+            if (p.getNombre().equals(prod.getNombre()) && p.comprador.equals(LoginController.mail_user)) {  
+                JOptionPane.showMessageDialog(null, "Este producto ya se encuentra en deseos");
+                existe = true;
+            }
+        }
+
+        if (!existe && prod.comprador.equals(LoginController.mail_user)) {
+            cola.add(prod);
+            JOptionPane.showMessageDialog(null, "Producto agregado a deseos: " + prod.getNombre());
+        }
     }
 
     public void eliminarDeDeseos(String nombreProducto) {
