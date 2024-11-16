@@ -54,7 +54,13 @@ public class carritoCola {
     public void eliminar_nombre(String nombreProducto) {
         for (producto elim : cola){
             if(elim.nombre.equals(nombreProducto)){
-                cola.remove(elim);
+                if(elim.cantidad == 1){
+                    cola.remove(elim);
+                    JOptionPane.showMessageDialog(null, "Producto eliminado!");
+                }else{
+                    elim.cantidad -=1;
+                    JOptionPane.showMessageDialog(null, "Producto eliminado!");
+                }
                 break;
             }
         }
@@ -70,28 +76,12 @@ public class carritoCola {
         }
 
         if (productoComprado != null) {
-            System.out.println("Comprando producto: " + productoComprado.getNombre() + " - Precio: $" + productoComprado.getPrecio());
-            cola.remove(productoComprado);
-        } else {
-            System.out.println("El producto con el nombre '" + nombreProducto + "' no está en el carrito.");
+            JOptionPane.showMessageDialog(null, "Comprando producto: " + productoComprado.getNombre() + " - Precio: $" + productoComprado.getPrecio());
+            if(productoComprado.cantidad == 1){
+                cola.remove(productoComprado);
+            }else{
+                productoComprado.cantidad -= 1;
+            }
         }
-    }
-
-    public void comprar_todo() {
-        if (cola.isEmpty()) {
-            System.out.println("El carrito está vacío, no hay productos para comprar.");
-            return;
-        }
-
-        float total = 0;
-        System.out.println("Procesando compra de todos los productos:");
-
-        for (producto prod : cola) {
-            System.out.println("Comprando producto: " + prod.getNombre() + " - Precio: $" + prod.getPrecio());
-            total += prod.getPrecio();
-        }
-
-        cola.clear(); 
-        System.out.println("Compra realizada. Total: $" + total);
     }
 }
