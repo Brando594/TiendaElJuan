@@ -13,18 +13,18 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="475.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tiendaeljuan.HistorialController">
   <columnConstraints>
     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
   </columnConstraints>
   <rowConstraints>
-    <RowConstraints minHeight="10.0" percentHeight="20.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" percentHeight="15.0" prefHeight="30.0" vgrow="SOMETIMES" />
     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
       <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: black;">
          <children>
-            <Button contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" style="-fx-background-radius: 90;" text="Button">
+            <Button fx:id="btnBack" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onAction="#actionEvent" style="-fx-background-radius: 90;" text="Button">
                <graphic>
                   <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -53,7 +53,7 @@
          <children>
             <VBox prefHeight="200.0" prefWidth="200.0">
                <children>
-                  <Label text="Apple IPhone 16 Pro (128 GB)">
+                  <Label fx:id="lb1">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
@@ -61,19 +61,22 @@
                         <Insets left="5.0" />
                      </padding>
                   </Label>
-                  <Button mnemonicParsing="false" prefHeight="137.0" prefWidth="178.0" style="-fx-background-color: transparent;" text="\$ 5.299.900">
+                  <Label fx:id="cant1">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding></Label>
+                  <Button fx:id="btn1" mnemonicParsing="false" onAction="#actionEvent" prefHeight="137.0" prefWidth="178.0" style="-fx-background-color: transparent;" wrapText="true">
                      <graphic>
-                        <ImageView fitHeight="150.0" fitWidth="90.0" pickOnBounds="true">
-                           <image>
-                              <Image url="@images/iphone16pro.jpg" />
-                           </image>
-                        </ImageView>
+                        <ImageView fx:id="img1" fitHeight="150.0" fitWidth="90.0" pickOnBounds="true" />
                      </graphic>
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Label layoutX="10.0" layoutY="10.0" text="Apple IPhone 14 Pro (256 GB)">
+                  <Label fx:id="lb4" layoutX="10.0" layoutY="10.0">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
@@ -81,60 +84,16 @@
                         <Insets left="5.0" />
                      </padding>
                   </Label>
-                  <Button layoutX="10.0" layoutY="27.0" mnemonicParsing="false" prefHeight="137.0" prefWidth="178.0" style="-fx-background-color: transparent;" text="\$ 7.500.000">
-                     <graphic>
-                        <ImageView fitHeight="120.0" fitWidth="90.0" pickOnBounds="true">
-                           <image>
-                              <Image url="@images/iphone14.jpg" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </Button>
-               </children>
-               <padding>
-                  <Insets top="5.0" />
-               </padding>
-            </VBox>
-            <VBox layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0">
-               <children>
-                  <Label text="Apple IPhone 12 Pro (256 GB)">
+                  <Label fx:id="cant4">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
                      <padding>
                         <Insets left="5.0" />
-                     </padding>
-                  </Label>
-                  <Button mnemonicParsing="false" prefHeight="137.0" prefWidth="178.0" style="-fx-background-color: transparent;" text="\$ 4.299.000">
+                     </padding></Label>
+                  <Button fx:id="btn4" layoutX="10.0" layoutY="27.0" mnemonicParsing="false" onAction="#actionEvent" prefHeight="137.0" prefWidth="178.0" style="-fx-background-color: transparent;" wrapText="true">
                      <graphic>
-                        <ImageView fitHeight="150.0" fitWidth="90.0" pickOnBounds="true">
-                           <image>
-                              <Image url="@images/iphone12pro.jpg" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </Button>
-                  <Label layoutX="10.0" layoutY="10.0" text="Apple IPhone 11 (64 GB)">
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                     <padding>
-                        <Insets left="5.0" />
-                     </padding>
-                  </Label>
-                  <Button layoutX="10.0" layoutY="27.0" mnemonicParsing="false" prefHeight="137.0" prefWidth="178.0" style="-fx-background-color: transparent;" text="\$ 1.500.000">
-                     <graphic>
-                        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@images/iphone11.jpg" />
-                           </image>
-                        </ImageView>
+                        <ImageView fx:id="img4" fitHeight="120.0" fitWidth="90.0" pickOnBounds="true" />
                      </graphic>
                      <cursor>
                         <Cursor fx:constant="HAND" />
@@ -147,7 +106,7 @@
             </VBox>
             <VBox layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0">
                <children>
-                  <Label text="Apple IPhone 13 Pro (256 GB)">
+                  <Label fx:id="lb2">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
@@ -155,19 +114,23 @@
                         <Insets left="5.0" />
                      </padding>
                   </Label>
-                  <Button mnemonicParsing="false" prefHeight="137.0" prefWidth="178.0" style="-fx-background-color: transparent;" text="\$ 3.000.000">
+                  <Label fx:id="cant2">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </Label>
+                  <Button fx:id="btn2" mnemonicParsing="false" onAction="#actionEvent" prefHeight="137.0" prefWidth="178.0" style="-fx-background-color: transparent;" wrapText="true">
                      <graphic>
-                        <ImageView fitHeight="150.0" fitWidth="90.0" pickOnBounds="true">
-                           <image>
-                              <Image url="@images/iphone13pro.jpg" />
-                           </image>
-                        </ImageView>
+                        <ImageView fx:id="img2" fitHeight="150.0" fitWidth="90.0" pickOnBounds="true" />
                      </graphic>
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Label layoutX="10.0" layoutY="10.0" text="Apple IPhone 14 Pro (256 GB)">
+                  <Label fx:id="lb5" layoutX="10.0" layoutY="10.0">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
@@ -175,13 +138,72 @@
                         <Insets left="5.0" />
                      </padding>
                   </Label>
-                  <Button layoutX="10.0" layoutY="27.0" mnemonicParsing="false" prefHeight="137.0" prefWidth="178.0" style="-fx-background-color: transparent;" text="\$ 4.500.000">
+                  <Label fx:id="cant5">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </Label>
+                  <Button fx:id="btn5" layoutX="10.0" layoutY="27.0" mnemonicParsing="false" onAction="#actionEvent" prefHeight="137.0" prefWidth="178.0" style="-fx-background-color: transparent;" wrapText="true">
                      <graphic>
-                        <ImageView fitHeight="150.0" fitWidth="90.0" pickOnBounds="true">
-                           <image>
-                              <Image url="@images/iphone14pro.jpg" />
-                           </image>
-                        </ImageView>
+                        <ImageView fx:id="img5" fitHeight="150.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+            </VBox>
+            <VBox layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="lb3">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="cant3">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </Label>
+                  <Button fx:id="btn3" mnemonicParsing="false" onAction="#actionEvent" prefHeight="137.0" prefWidth="178.0" style="-fx-background-color: transparent;" wrapText="true">
+                     <graphic>
+                        <ImageView fx:id="img3" fitHeight="150.0" fitWidth="90.0" pickOnBounds="true" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Label fx:id="lb6" layoutX="10.0" layoutY="10.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="cant6">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </Label>
+                  <Button fx:id="btn6" layoutX="10.0" layoutY="27.0" mnemonicParsing="false" onAction="#actionEvent" prefHeight="137.0" prefWidth="178.0" style="-fx-background-color: transparent;" wrapText="true">
+                     <graphic>
+                        <ImageView fx:id="img6" fitHeight="150.0" fitWidth="90.0" pickOnBounds="true" />
                      </graphic>
                      <cursor>
                         <Cursor fx:constant="HAND" />

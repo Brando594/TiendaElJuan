@@ -78,8 +78,10 @@ public class carritoCola {
         if (productoComprado != null) {
             JOptionPane.showMessageDialog(null, "Comprando producto: " + productoComprado.getNombre() + " - Precio: $" + productoComprado.getPrecio());
             if(productoComprado.cantidad == 1){
+                PrincipalController.pila.añadirHistorial(productoComprado);
                 cola.remove(productoComprado);
             }else{
+                PrincipalController.pila.añadirHistorial(productoComprado);
                 productoComprado.cantidad -= 1;
             }
         }

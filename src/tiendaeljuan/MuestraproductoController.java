@@ -26,6 +26,7 @@ import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import javafx.stage.Window;
 import javafx.stage.WindowEvent;
+import javax.swing.JOptionPane;
 
 /**
  * FXML Controller class
@@ -55,6 +56,11 @@ public class MuestraproductoController implements Initializable {
         if(evt.equals(btnDes)){
             producto p = new producto(PrincipalController.nombre, PrincipalController.imagen, LoginController.mail_user, PrincipalController.precio, 1);
             PrincipalController.cola2.agregarProducto(p);
+        }
+        if(evt.equals(btnCom)){
+            producto p = new producto(PrincipalController.nombre, PrincipalController.imagen, LoginController.mail_user, PrincipalController.precio, 1);
+            JOptionPane.showMessageDialog(null, "Comprando producto: " + p.getNombre() + " - Precio: $" + p.getPrecio());
+            PrincipalController.pila.añadirHistorial(p);
         }
     }
     

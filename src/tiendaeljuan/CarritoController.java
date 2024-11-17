@@ -45,6 +45,8 @@ public class CarritoController implements Initializable {
     @FXML
     private Button btn1, btn2, btn3, btn4, btn5, btn6, btnBack;
     
+    public String url1,url2, url3, url4, url5, url6;
+    
     public void llenar_carrito(){
         vaciar_carrito();
         int boton = 1;
@@ -55,6 +57,7 @@ public class CarritoController implements Initializable {
                         lb1.setText(p.getNombre());
                         cant1.setText("Cantidad: "+p.getCantidad());
                         btn1.setText("$" + p.getPrecio() + "\nOpciones");
+                        url1 = p.getFoto();
                         Image image1 = new Image(p.getFoto());
                         img1.setImage(image1);
                         break;
@@ -62,6 +65,7 @@ public class CarritoController implements Initializable {
                         lb2.setText(p.getNombre());
                         cant2.setText("Cantidad: "+p.getCantidad());
                         btn2.setText("$" + p.getPrecio() + "\nOpciones");
+                        url2 = p.getFoto();
                         Image image2 = new Image(p.getFoto());
                         img2.setImage(image2);
                         break;
@@ -69,6 +73,7 @@ public class CarritoController implements Initializable {
                         lb3.setText(p.getNombre());
                         cant3.setText("Cantidad: "+p.getCantidad());
                         btn3.setText("$" + p.getPrecio() + "\nOpciones");
+                        url3 = p.getFoto();
                         Image image3 = new Image(p.getFoto());
                         img3.setImage(image3);
                         break;
@@ -76,6 +81,7 @@ public class CarritoController implements Initializable {
                         lb4.setText(p.getNombre());
                         cant4.setText("Cantidad: "+p.getCantidad());
                         btn4.setText("$" + p.getPrecio() + "\nOpciones");
+                        url4 = p.getFoto();
                         Image image4 = new Image(p.getFoto());
                         img4.setImage(image4);
                         break;
@@ -83,6 +89,7 @@ public class CarritoController implements Initializable {
                         lb5.setText(p.getNombre());
                         cant5.setText("Cantidad: "+p.getCantidad());
                         btn5.setText("$" + p.getPrecio() + "\nOpciones");
+                        url5 = p.getFoto();
                         Image image5 = new Image(p.getFoto());
                         img5.setImage(image5);
                         break;
@@ -90,6 +97,7 @@ public class CarritoController implements Initializable {
                         lb6.setText(p.getNombre());
                         cant6.setText("Cantidad: "+p.getCantidad());
                         btn6.setText("$" + p.getPrecio() + "\nOpciones");
+                        url6 = p.getFoto();
                         Image image6 = new Image(p.getFoto());
                         img6.setImage(image6);
                         break;
