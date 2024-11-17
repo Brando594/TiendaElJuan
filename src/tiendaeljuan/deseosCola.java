@@ -12,7 +12,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author danie
+ * @author Brando
  */
 public class deseosCola {
         
