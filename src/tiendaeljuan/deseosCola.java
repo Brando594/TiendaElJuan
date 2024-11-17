@@ -51,13 +51,23 @@ public class deseosCola {
         }
     }
 
-    // Método para comprar un producto específico por su nombre
-    public void Comprar(String nombreProducto) {
+    public void comprar_nombre(String nombreProducto) {
         producto productoComprado = null;
         for (producto prod : cola) {
             if (prod.getNombre().equalsIgnoreCase(nombreProducto)) {
                 productoComprado = prod;
                 break;
+            }
+        }
+
+        if (productoComprado != null) {
+            JOptionPane.showMessageDialog(null, "Comprando producto: " + productoComprado.getNombre() + " - Precio: $" + productoComprado.getPrecio());
+            if(productoComprado.cantidad == 1){
+                PrincipalController.pila.añadirHistorial(productoComprado);
+                cola.remove(productoComprado);
+            }else{
+                PrincipalController.pila.añadirHistorial(productoComprado);
+                productoComprado.cantidad -= 1;
             }
         }
     }

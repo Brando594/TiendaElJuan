@@ -68,7 +68,7 @@
                      <padding>
                         <Insets left="5.0" />
                      </padding></Label>
-                  <Button fx:id="btn1" mnemonicParsing="false" prefHeight="137.0" prefWidth="178.0" style="-fx-background-color: transparent;" wrapText="true">
+                  <Button fx:id="btn1" mnemonicParsing="false" onAction="#actionEvent" prefHeight="137.0" prefWidth="178.0" style="-fx-background-color: transparent;" wrapText="true">
                      <graphic>
                         <ImageView fx:id="img1" fitHeight="150.0" fitWidth="90.0" pickOnBounds="true" />
                      </graphic>
@@ -91,7 +91,7 @@
                      <padding>
                         <Insets left="5.0" />
                      </padding></Label>
-                  <Button fx:id="btn4" layoutX="10.0" layoutY="27.0" mnemonicParsing="false" prefHeight="137.0" prefWidth="178.0" style="-fx-background-color: transparent;" wrapText="true">
+                  <Button fx:id="btn4" layoutX="10.0" layoutY="27.0" mnemonicParsing="false" onAction="#actionEvent" prefHeight="137.0" prefWidth="178.0" style="-fx-background-color: transparent;" wrapText="true">
                      <graphic>
                         <ImageView fx:id="img4" fitHeight="120.0" fitWidth="90.0" pickOnBounds="true" />
                      </graphic>
@@ -122,7 +122,7 @@
                         <Insets left="5.0" />
                      </padding>
                   </Label>
-                  <Button fx:id="btn2" mnemonicParsing="false" prefHeight="137.0" prefWidth="178.0" style="-fx-background-color: transparent;" wrapText="true">
+                  <Button fx:id="btn2" mnemonicParsing="false" onAction="#actionEvent" prefHeight="137.0" prefWidth="178.0" style="-fx-background-color: transparent;" wrapText="true">
                      <graphic>
                         <ImageView fx:id="img2" fitHeight="150.0" fitWidth="90.0" pickOnBounds="true" />
                      </graphic>
@@ -146,7 +146,7 @@
                         <Insets left="5.0" />
                      </padding>
                   </Label>
-                  <Button fx:id="btn5" layoutX="10.0" layoutY="27.0" mnemonicParsing="false" prefHeight="137.0" prefWidth="178.0" style="-fx-background-color: transparent;" wrapText="true">
+                  <Button fx:id="btn5" layoutX="10.0" layoutY="27.0" mnemonicParsing="false" onAction="#actionEvent" prefHeight="137.0" prefWidth="178.0" style="-fx-background-color: transparent;" wrapText="true">
                      <graphic>
                         <ImageView fx:id="img5" fitHeight="150.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true" />
                      </graphic>
@@ -177,7 +177,7 @@
                         <Insets left="5.0" />
                      </padding>
                   </Label>
-                  <Button fx:id="btn3" mnemonicParsing="false" prefHeight="137.0" prefWidth="178.0" style="-fx-background-color: transparent;" wrapText="true">
+                  <Button fx:id="btn3" mnemonicParsing="false" onAction="#actionEvent" prefHeight="137.0" prefWidth="178.0" style="-fx-background-color: transparent;" wrapText="true">
                      <graphic>
                         <ImageView fx:id="img3" fitHeight="150.0" fitWidth="90.0" pickOnBounds="true" />
                      </graphic>
@@ -201,7 +201,7 @@
                         <Insets left="5.0" />
                      </padding>
                   </Label>
-                  <Button fx:id="btn6" layoutX="10.0" layoutY="27.0" mnemonicParsing="false" prefHeight="137.0" prefWidth="178.0" style="-fx-background-color: transparent;" wrapText="true">
+                  <Button fx:id="btn6" layoutX="10.0" layoutY="27.0" mnemonicParsing="false" onAction="#actionEvent" prefHeight="137.0" prefWidth="178.0" style="-fx-background-color: transparent;" wrapText="true">
                      <graphic>
                         <ImageView fx:id="img6" fitHeight="150.0" fitWidth="90.0" pickOnBounds="true" />
                      </graphic>
